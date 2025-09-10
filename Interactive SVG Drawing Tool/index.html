@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive SVG Drawing Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SVG Drawing Tool</h1>
+    <div class="toolbar">
+      <label>Shape:
+        <select id="shape-select">
+          <option value="rect">Rectangle</option>
+          <option value="line">Line</option>
+        </select>
+      </label>
+
+      <label>Stroke:
+        <input type="color" id="stroke-color" value="#333333">
+      </label>
+
+      <label>Fill:
+        <input type="color" id="fill-color" value="#ffcc00">
+      </label>
+
+      <label>Stroke width:
+        <input type="number" id="stroke-width" min="1" max="10" value="2">
+      </label>
+
+      <button id="clear-btn">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <p class="hint">Click and drag inside the canvas to draw. Draw multiple shapes. Switch shape from toolbar.</p>
+
+    <div class="canvas-wrap">
+      <!-- SVG canvas -->
+      <svg id="svgCanvas" class="canvas" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </main>
+
+  <footer>
+    <small>Interactive SVG Drawing — click & drag to draw (rect / line).</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
